@@ -1,0 +1,6 @@
+@template_api_rest_postgres_HostAddress = http://localhost:5141
+
+GET {{template_api_rest_postgres_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
