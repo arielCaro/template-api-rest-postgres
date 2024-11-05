@@ -48,6 +48,32 @@ namespace template.api.postgres.data
 			}
 		}
 
+        public static async Task<TbUser> Get(DbtemplateRestContext context, string email)
+        {
+            try
+            {
+                return await context.TbUsers.FirstOrDefaultAsync(u => u.Email == email);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static async Task<TbUser> Get(DbtemplateRestContext context, string email, string password)
+        {
+            try
+            {
+                return await context.TbUsers.FirstOrDefaultAsync(u => u.Email == email );
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public static async Task<List<TbUser>> GetAll(Models.DbtemplateRestContext context)
         {
             try

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "template-api-rest-postgres"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "template.api.postgres.data", "template.api.postgres.data\template.api.postgres.data.csproj", "{B0253C9E-630D-4345-AE16-7C50981429E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "template.api.postgres.common", "template.api.postgres.common\template.api.postgres.common.csproj", "{EF753A76-E935-476D-BA5C-7DB54BE4E224}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B0253C9E-630D-4345-AE16-7C50981429E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0253C9E-630D-4345-AE16-7C50981429E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0253C9E-630D-4345-AE16-7C50981429E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF753A76-E935-476D-BA5C-7DB54BE4E224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF753A76-E935-476D-BA5C-7DB54BE4E224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF753A76-E935-476D-BA5C-7DB54BE4E224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF753A76-E935-476D-BA5C-7DB54BE4E224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

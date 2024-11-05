@@ -22,4 +22,16 @@ public partial class TbUser
     public string UserModified { get; set; } = null!;
 
     public long IdCompany { get; set; }
+
+    public string Password { get; set; } = null!;
+
+    public int IdRole { get; set; }
+
+    public int Phone { get; set; }
+
+    public int PhoneMobile { get; set; }
+
+    public string CodePhoneCountry { get; set; } = null!;
+
+    public string Name { get; set; } = null!;
 }

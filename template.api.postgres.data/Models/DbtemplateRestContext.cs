@@ -17,6 +17,10 @@ public partial class DbtemplateRestContext : DbContext
 
     public virtual DbSet<TbCompany> TbCompanies { get; set; }
 
+    public virtual DbSet<TbRole> TbRoles { get; set; }
+
+    public virtual DbSet<TbSession> TbSessions { get; set; }
+
     public virtual DbSet<TbTokenBearer> TbTokenBearers { get; set; }
 
     public virtual DbSet<TbUser> TbUsers { get; set; }
@@ -37,6 +41,23 @@ public partial class DbtemplateRestContext : DbContext
             entity.Property(e => e.UserModifield).HasMaxLength(100);
         });
 
+        modelBuilder.Entity<TbRole>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("TbRole_pkey");
+
+            entity.ToTable("TbRole");
+
+            entity.Property(e => e.Description).HasMaxLength(200);
+            entity.Property(e => e.Name).HasMaxLength(200);
+        });
+
+        modelBuilder.Entity<TbSession>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("TbSession_pkey");
+
+            entity.ToTable("TbSession");
+        });
+
         modelBuilder.Entity<TbTokenBearer>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("TbTokenBearers_pkey");
@@ -46,8 +67,12 @@ public partial class DbtemplateRestContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("TbUsers_pkey");
 
+            entity.Property(e => e.CodePhoneCountry)
+                .HasMaxLength(10)
+                .IsFixedLength();
             entity.Property(e => e.Email).HasMaxLength(200);
             entity.Property(e => e.LastName).HasMaxLength(200);
+            entity.Property(e => e.Name).HasMaxLength(200);
             entity.Property(e => e.UserCreated).HasMaxLength(100);
             entity.Property(e => e.UserModified).HasMaxLength(100);
         });
